@@ -70,4 +70,7 @@ class Building(BaseModel):
         self,
     ) -> Timeseries:
         # Please provide your solution here.
+        now = get_first_moment_of_month(datetime.now())
+        start = now - relativedelta(years=1)
+        end = now + relativedelta(years=1)
         raise NotImplementedError()
